@@ -201,9 +201,9 @@ def train_estimator(x_train, y_train):
     return estimator
 
 def eval_metrics(y_true, y_pred):
-    from sklearn.metrics import balanced_accuracy_score, accuracy_score, recall_score, f1_score
+    from sklearn.metrics import precision_score, balanced_accuracy_score, recall_score, f1_score
 
-    acc = accuracy_score(y_true, y_pred)
+    acc = precision_score(y_true, y_pred)
     bacc = balanced_accuracy_score(y_true, y_pred)
     recall = recall_score(y_true, y_pred)
     f1 = f1_score(y_true, y_pred)
